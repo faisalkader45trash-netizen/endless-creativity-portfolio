@@ -2,7 +2,8 @@
 :root {
     --bg-color: #111111;
     --text-color: #eeeeee;
-    --accent-color: #D4AF37; /* Gold */
+    --accent-color: #D4AF37;
+    /* Gold */
     --font-main: 'Inter', sans-serif;
     --transition-speed: 0.5s;
 }
@@ -42,7 +43,9 @@ ul {
 }
 
 /* Typography */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 600;
     letter-spacing: -0.02em;
 }
@@ -81,6 +84,40 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    gap: 12px;
+    user-select: none;
+}
+
+.logo-icon {
+    height: 50px;
+    width: auto;
+    overflow: visible;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+}
+
+.logo-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f3f4f6;
+    /* Dark mode text */
+    letter-spacing: -0.025em;
+    font-family: var(--font-main);
+}
+
+.logo-subtitle {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #9ca3af;
+    /* Dark mode subtext */
+    margin-top: 4px;
 }
 
 .nav-links {
@@ -240,19 +277,20 @@ footer {
     h1 {
         font-size: 2rem;
     }
-    
+
     .usp-text {
         font-size: 1.1rem;
     }
-    
+
     header {
         padding: 20px;
     }
-    
+
     .nav-links {
-        display: none; /* Simple hide for now, could add hamburger if needed */
+        display: none;
+        /* Simple hide for now, could add hamburger if needed */
     }
-    
+
     .gallery-grid {
         grid-template-columns: 1fr;
     }
