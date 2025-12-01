@@ -1,3 +1,212 @@
+/* Global Styles */
+:root {
+    --bg-color: #0a0a0a;
+    /* Deep black for v2.0 */
+    --text-color: #eeeeee;
+    --accent-color: #D4AF37;
+    /* Gold */
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+    --transition-speed: 0.5s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+p {
+    font-weight: 300;
+    color: #bbb;
+    font-size: 1.1rem;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 40px;
+    /* Reduced padding */
+    display: flex;
+    justify-content: flex-start;
+    /* Left align */
+    gap: 60px;
+    /* Space between logo and nav */
+    align-items: center;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    height: 30px;
+    /* Small logo */
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background-color: var(--bg-color);
+    background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+.hero-content {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.hero-content h1 .accent {
+    color: var(--accent-color);
+    font-style: italic;
+}
+
+.subheadline {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    opacity: 0.7;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+    /* Force single line on desktop */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 20px 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    transition: all 0.4s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border-color: var(--text-color);
+}
+
+/* USP Section */
+.usp-section {
+    padding: 150px 0;
+    text-align: center;
+    background-color: #0f0f0f;
+}
+
+.usp-text {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.4;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 100px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    grid-auto-flow: dense;
+}
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    cursor: zoom-in;
+}
+
+.gallery-item.span-2 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
 .gallery-item img {
     width: 100%;
     height: 100%;
