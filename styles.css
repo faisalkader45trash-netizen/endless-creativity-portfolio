@@ -76,12 +76,12 @@ header {
     top: 0;
     width: 100%;
     padding: 15px 40px;
-    /* Reduced padding as requested */
+    /* Reduced padding */
     display: flex;
     justify-content: flex-start;
-    /* Align items to the start (left) */
+    /* Left align */
     gap: 60px;
-    /* Add space between logo and nav links */
+    /* Space between logo and nav */
     align-items: center;
     background: rgba(10, 10, 10, 0.8);
     backdrop-filter: blur(15px);
@@ -95,7 +95,7 @@ header {
 
 .logo-icon {
     height: 30px;
-    /* Reduced to 30px as requested */
+    /* Small logo */
     width: auto;
 }
 
@@ -127,7 +127,63 @@ header {
     background-color: var(--bg-color);
 }
 
+.hero-content {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.hero-content h1 .accent {
+    color: var(--accent-color);
+    font-style: italic;
+}
+
+.subheadline {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    opacity: 0.7;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+    /* Force single line on desktop */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 20px 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    transition: all 0.4s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border-color: var(--text-color);
+}
+
 /* USP Section */
+.usp-section {
+    padding: 150px 0;
+    text-align: center;
+    background-color: #0f0f0f;
+}
+
+.usp-text {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.4;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 100px 0;
 }
 
 .gallery-grid {
@@ -218,10 +274,18 @@ footer {
 
     header {
         padding: 20px;
+        justify-content: space-between;
+        /* Revert to space-between on mobile */
+        gap: 0;
     }
 
     .nav-links {
         display: none;
+    }
+
+    .subheadline {
+        white-space: normal;
+        /* Allow wrapping on mobile */
     }
 
     .gallery-grid {
