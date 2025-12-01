@@ -1,0 +1,75 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="creativeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#000000">
+        <animate attributeName="stop-color" values="#000000;#D4AF37;#FFFFFF;#000000" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#D4AF37">
+         <animate attributeName="stop-color" values="#D4AF37;#FFFFFF;#000000;#D4AF37" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#FFFFFF">
+         <animate attributeName="stop-color" values="#FFFFFF;#000000;#D4AF37;#FFFFFF" dur="4s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <path
+    d="M 200,100 
+       C 250,100 320,150 350,150 
+       C 380,150 400,130 400,100 
+       C 400,70 380,50 350,50 
+       C 320,50 250,100 200,100 
+       C 150,100 80,50 50,50 
+       C 20,50 0,70 0,100 
+       C 0,130 20,150 50,150 
+       C 80,150 150,100 200,100 Z"
+    fill="none"
+    stroke="url(#creativeGradient)"
+    stroke-width="12"
+    stroke-linecap="round"
+    filter="url(#glow)"
+    class="path-animation"
+  />
+  
+  <circle cx="200" cy="100" r="8" fill="#D4AF37" style="opacity: 0.2; animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;" />
+  <circle cx="200" cy="100" r="4" fill="#000000" />
+
+  <style>
+    .path-animation {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: draw 3s ease-out forwards;
+    }
+
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+    @keyframes ping {
+        75%, 100% {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+    
+    /* Ensure transform-origin is set for ping animation if needed, though SVG circle transform-origin defaults to 0,0 usually. 
+       For simple ping on circle center, CSS transform might need explicit origin or use SMIL. 
+       Let's stick to the user's intent. The user used Tailwind 'animate-ping'. 
+       Tailwind ping: transform: scale(2); opacity: 0;
+    */
+    circle {
+        transform-box: fill-box;
+        transform-origin: center;
+    }
+  </style>
+</svg>
