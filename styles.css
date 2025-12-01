@@ -78,7 +78,10 @@ header {
     padding: 15px 40px;
     /* Reduced padding as requested */
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    /* Align items to the start (left) */
+    gap: 60px;
+    /* Add space between logo and nav links */
     align-items: center;
     background: rgba(10, 10, 10, 0.8);
     backdrop-filter: blur(15px);
@@ -125,24 +128,6 @@ header {
 }
 
 /* USP Section */
-.usp-section {
-    padding: 150px 0;
-    text-align: center;
-    background-color: #0f0f0f;
-}
-
-.usp-text {
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
-    max-width: 900px;
-    margin: 0 auto;
-    line-height: 1.4;
-    color: #fff;
-    font-weight: 400;
-}
-
-/* Gallery Section */
-.gallery-section {
-    padding: 100px 0;
 }
 
 .gallery-grid {
