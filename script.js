@@ -35,27 +35,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
+    // Lightbox Functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementsByClassName('close')[0];
 
-// Lightbox Functionality
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const closeBtn = document.getElementsByClassName('close')[0];
-
-document.querySelectorAll('.gallery-item img').forEach(image => {
-    image.addEventListener('click', function () {
-        lightbox.style.display = "block";
-        lightboxImg.src = this.src;
+    document.querySelectorAll('.gallery-item img').forEach(image => {
+        image.addEventListener('click', function () {
+            lightbox.style.display = "block";
+            lightboxImg.src = this.src;
+        });
     });
-});
 
-closeBtn.onclick = function () {
-    lightbox.style.display = "none";
-}
-
-lightbox.onclick = function (e) {
-    if (e.target !== lightboxImg) {
+    closeBtn.onclick = function () {
         lightbox.style.display = "none";
     }
-}
+
+    lightbox.onclick = function (e) {
+        if (e.target !== lightboxImg) {
+            lightbox.style.display = "none";
+        }
+    }
 });
