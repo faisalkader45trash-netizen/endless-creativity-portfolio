@@ -17,5 +17,13 @@ const galleryItems = [
     { src: 'images/U-14.jpg', category: 'Fashion', alt: 'Man using security token for two-factor authentication on laptop' },
     { src: 'images/U-16.jpg', category: 'Product', alt: 'Digital Music Sequencer Interface on Tablet Screen with Neon Grid' },
     { src: 'images/U-19.jpg', category: 'Fashion', alt: 'Customer paying with credit card at modern POS system in store' },
-    { src: 'images/U-11.jpg', category: 'Landscape', alt: 'Man using security token for two-factor authentication on laptop' }
+    { src: 'images/U-11.jpg', category: 'Landscape', alt: 'Man using security token for two-factor authentication on laptop' },
+
+    // Batch Upload (03-12-2025)
+    { src: 'images/U-1.jpg', category: 'Landscape', alt: 'Drone Delivering Package Through Dark Forest at Sunset' },
+    { src: 'images/U-4.jpg', category: 'Abstract', alt: 'Data Processing Workflow with Camera, CPU, Database, and Security Icons' },
+    { src: 'images/U-10.jpg', category: 'Abstract', alt: 'Futuristic Radar Screen Interface with Scanning Signal' },
+    { src: 'images/U-17.jpg', category: 'Abstract', alt: 'Hands holding data flow diagram with cloud and server icons' },
+    { src: 'images/U-20.jpg', category: 'Abstract', alt: 'Premium AI Visual' },
+    { src: 'images/U-22.jpg', category: 'Portrait', alt: 'Person Receiving Drone Delivered Package at Front Door' }
 ];
