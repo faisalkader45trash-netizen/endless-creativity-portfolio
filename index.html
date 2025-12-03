@@ -70,26 +70,17 @@
         <section id="gallery" class="gallery-section fade-in">
             <div class="container">
                 <h2>Selected Works</h2>
-                <div class="gallery-grid">
-                    <!-- Original Images -->
-                    <div class="gallery-item span-2"><img src="images/gallery_portrait.png" alt="Futuristic Portrait"
-                            loading="lazy"></div>
-                    <div class="gallery-item"><img src="images/gallery_landscape.png" alt="Ethereal Landscape"
-                            loading="lazy"></div>
-                    <div class="gallery-item"><img src="images/gallery_abstract.png" alt="Gold Abstract" loading="lazy">
-                    </div>
 
-                    <!-- New Uploaded Images -->
-                    <div class="gallery-item"><img src="images/gallery_new_1.jpg" alt="Premium AI Visual 1"
-                            loading="lazy"></div>
-                    <div class="gallery-item"><img src="images/gallery_new_2.jpg" alt="Premium AI Visual 2"
-                            loading="lazy"></div>
-                    <div class="gallery-item"><img src="images/gallery_new_3.jpg" alt="Premium AI Visual 3"
-                            loading="lazy"></div>
-                    <div class="gallery-item"><img src="images/gallery_new_4.jpg" alt="Premium AI Visual 4"
-                            loading="lazy"></div>
-                    <div class="gallery-item"><img src="images/gallery_new_5.jpg" alt="Premium AI Visual 5"
-                            loading="lazy"></div>
+                <!-- Filter Buttons -->
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="Portrait">Portrait</button>
+                    <button class="filter-btn" data-filter="Landscape">Landscape</button>
+                    <button class="filter-btn" data-filter="Abstract">Abstract</button>
+                </div>
+
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Images will be injected here by script.js -->
                 </div>
             </div>
         </section>
@@ -115,8 +106,8 @@
         <img class="lightbox-content" id="lightbox-img">
     </div>
 
-    <script src="gallery-data.js"></script>
-    <script src="script.js?v=3.0"></script>
+    <script src="gallery-data.js?v=1.1"></script>
+    <script src="script.js?v=3.1"></script>
 </body>
 
 </html>
